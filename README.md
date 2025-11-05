@@ -5,6 +5,8 @@ Simple LSTM model to forecast New York Taxi &amp; Limousine Commission's hourly 
 
 __*There's no dataset in this repo because it is too large. Refer to [this link](https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page) if you want to download the dataset.*__
 
+<br>
+
 ## Information
 **Task:** Forecast taxi demand for the next hour
 
@@ -17,23 +19,29 @@ __*There's no dataset in this repo because it is too large. Refer to [this link]
 - lag_24 (1 day lag)
 - lag_168 (1 week lag)
 
+<br>
+
 ### Architecture:
 ***LSTM(50) → Dense(10) → Dense(1)***
 
-**Loss:** MSE
+- **Loss:** MSE
 
-**Batch Size:** 32
+- **Batch Size:** 32
 
-**Epoch:** Early stopped at ~60 epoch (10 patience)
+- **Epoch:** Early stopped at ~60 epoch (10 patience)
+
+<br>
 
 ### Test Metrics:
 Train/test split uses 80:20 chronological split with no shuffle.
 
-**RMSE Percentage:** ~7.64%
+- **RMSE Percentage:** ~7.64%
 
-**MSE Percentage:** ~0.58%
+- **MSE Percentage:** ~0.58%
 
-**R-squared:** ~0.979
+- **R-squared:** ~0.979
+
+<br>
 
 ### Limitations:
 - As of now, the model could only forecast 1 hour ahead.
